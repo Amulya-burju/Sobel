@@ -1,0 +1,28 @@
+
+State Machine - |top|main:main_inst|cur_state
+Name cur_state.LEGUP_F_main_BB__64_24 cur_state.LEGUP_F_main_BB__62_23 cur_state.LEGUP_F_main_BB__60_22 cur_state.LEGUP_F_main_BB__58_21 cur_state.LEGUP_F_main_BB__56_20 cur_state.LEGUP_F_main_BB__51_19 cur_state.LEGUP_F_main_BB__51_18 cur_state.LEGUP_F_main_BB__51_17 cur_state.LEGUP_F_main_BB_preheader_16 cur_state.LEGUP_F_main_BB_preheaderpreheader_15 cur_state.LEGUP_F_main_BB__50_14 cur_state.LEGUP_F_main_BB_uslcssa8usi_13 cur_state.LEGUP_F_main_BB_uslcssa8usi_12 cur_state.LEGUP_F_main_BB_preheaderpreheaderi_11 cur_state.LEGUP_F_main_BB_preheaderpreheaderi_10 cur_state.LEGUP_F_main_BB_preheaderpreheaderi_9 cur_state.LEGUP_F_main_BB_preheaderpreheaderi_8 cur_state.LEGUP_F_main_BB_preheaderpreheaderi_7 cur_state.LEGUP_F_main_BB_preheaderpreheaderi_6 cur_state.LEGUP_F_main_BB_preheaderpreheaderi_5 cur_state.LEGUP_F_main_BB_uslcssa8usi_crit_edge_4 cur_state.LEGUP_F_main_BB__5_3 cur_state.LEGUP_F_main_BB_preheader1i_2 cur_state.LEGUP_F_main_BB__0_1 cur_state.LEGUP_0 
+cur_state.LEGUP_0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+cur_state.LEGUP_F_main_BB__0_1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+cur_state.LEGUP_F_main_BB_preheader1i_2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+cur_state.LEGUP_F_main_BB__5_3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+cur_state.LEGUP_F_main_BB_uslcssa8usi_crit_edge_4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+cur_state.LEGUP_F_main_BB_preheaderpreheaderi_5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB_preheaderpreheaderi_6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB_preheaderpreheaderi_7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB_preheaderpreheaderi_8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB_preheaderpreheaderi_9 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB_preheaderpreheaderi_10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB_preheaderpreheaderi_11 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB_uslcssa8usi_12 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB_uslcssa8usi_13 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB__50_14 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB_preheaderpreheader_15 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB_preheader_16 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB__51_17 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB__51_18 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB__51_19 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB__56_20 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB__58_21 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB__60_22 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB__62_23 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+cur_state.LEGUP_F_main_BB__64_24 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,38 @@
+digraph {
+Node0x3fdf040[label="  %gy_sum.0.lcssa.i = phi i32 [ 0, %..us..."];
+Node0x3fdf040 -> Node0x3fdf040[label="D:0.00ns L:0",color=blue];
+Node0x3fdf040 -> Node0x3fdf040[label="D:0.00ns L:0",color=blue];
+Node0x3fdf040 -> Node0x3fdf040[label="D:0.00ns L:0",color=blue];
+Node0x3fdf120[label="  %gx_sum.0.lcssa.i = phi i32 [ 0, %..us..."];
+Node0x3fdf120 -> Node0x3fdf120[label="D:0.00ns L:0",color=blue];
+Node0x3fdf120 -> Node0x3fdf120[label="D:0.00ns L:0",color=blue];
+Node0x3fdf120 -> Node0x3fdf120[label="D:0.00ns L:0",color=blue];
+Node0x3fdf200[label="  %.pre-phi = add nsw i32 %j.017.i, 1"];
+Node0x3fdf200 -> Node0x3fdf200[label="D:2.50ns L:0",color=blue];
+Node0x3fdf200 -> Node0x3fdf200[label="D:2.50ns L:0",color=blue];
+Node0x3fdf2e0[label="  %40 = icmp slt i32 %gx_sum.0.lcssa.i, ..."];
+Node0x3fdf2e0 -> Node0x3fdf2e0[label="D:3.36ns L:0",color=blue];
+Node0x3fdf3c0[label="  %41 = sub nsw i32 0, %gx_sum.0.lcssa.i"];
+Node0x3fdf3c0 -> Node0x3fdf3c0[label="D:2.40ns L:0",color=blue];
+Node0x3fdf4a0[label="  %42 = select i1 %40, i32 %41, i32 %gx_..."];
+Node0x3fdf4a0 -> Node0x3fdf4a0[label="D:3.99ns L:0",color=blue];
+Node0x3fdf580[label="  %43 = icmp slt i32 %gy_sum.0.lcssa.i, ..."];
+Node0x3fdf580 -> Node0x3fdf580[label="D:3.36ns L:0",color=blue];
+Node0x3fdf660[label="  %44 = sub nsw i32 0, %gy_sum.0.lcssa.i"];
+Node0x3fdf660 -> Node0x3fdf660[label="D:2.40ns L:0",color=blue];
+Node0x3fdf740[label="  %45 = select i1 %43, i32 %44, i32 %gy_..."];
+Node0x3fdf740 -> Node0x3fdf740[label="D:3.99ns L:0",color=blue];
+Node0x3fdf820[label="  %46 = add nsw i32 %45, %42"];
+Node0x3fdf820 -> Node0x3fdf820[label="D:2.50ns L:0",color=blue];
+Node0x3fdf820 -> Node0x3fdf820[label="D:2.50ns L:0",color=blue];
+Node0x3fdf900[label="  %47 = icmp sgt i32 %46, 255"];
+Node0x3fdf900 -> Node0x3fdf900[label="D:3.13ns L:0",color=blue];
+Node0x3fdf9e0[label="  %48 = trunc i32 %46 to i8"];
+Node0x3fdf9e0 -> Node0x3fdf9e0[label="D:0.00ns L:0",color=blue];
+Node0x3fdfac0[label="  %49 = select i1 %47, i8 -1, i8 %48"];
+Node0x3fdfac0 -> Node0x3fdfac0[label="D:2.65ns L:0",color=blue];
+Node0x3fdfba0[label="  %scevgep7 = getelementptr [512 x [512 ..."];
+Node0x3fdfba0 -> Node0x3fdfba0[label="D:20.00ns L:0",color=blue];
+Node0x3fdfd60[label="  %exitcond25.i = icmp eq i32 %.pre-phi,..."];
+Node0x3fdfd60 -> Node0x3fdfd60[label="D:2.49ns L:0",color=blue];
+}
