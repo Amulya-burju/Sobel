@@ -1,0 +1,8 @@
+digraph {
+Node0x3fe01c0[label="  %i.04 = phi i32 [ %57, %56 ], [ 0, %.p..."];
+Node0x3fe01c0 -> Node0x3fe01c0[label="D:0.00ns L:0",color=blue];
+Node0x3fe01c0 -> Node0x3fe01c0[label="D:0.00ns L:0",color=blue];
+Node0x3fe01c0 -> Node0x3fe01c0[label="D:0.00ns L:0",color=blue];
+Node0x3fe02a0[label="  %result.03 = phi i32 [ %result.1., %56..."];
+Node0x3fe02a0 -> Node0x3fe02a0[label="D:0.00ns L:0",color=blue];
+}

@@ -1,0 +1,313 @@
+\documentclass[landscape]{article}
+\usepackage{gantt}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%sobel\_output = alloca [512 x [512 x i8]], align 1}{1}{1}
+\ganttbar{  br label \%.preheader1.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{8}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%i.019.i = phi i32 [ 0, \%0 ], [ \%4, \%50 ]}{1}{1}
+\ganttcon{2}{1}{1}{6}
+\ganttcon{2}{1}{1}{3}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%1 = add i32 \%i.019.i, 1}{1}{1}
+\ganttbar{  \%i.0.off.i = add i32 \%i.019.i, -1}{1}{1}
+\ganttcon{2}{3}{1}{4}
+\ganttbar{  \%2 = icmp ugt i32 \%i.0.off.i, 509}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  \%3 = zext i1 \%2 to i32}{1}{1}
+\ganttbar{  \%4 = add nsw i32 \%i.019.i, 1}{1}{1}
+\ganttcon{2}{6}{1}{1}
+\ganttbar{  br label \%5}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{8}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%j.017.i = phi i32 [ 0, \%.preheader1.i ], [ \%.pre-phi, \%.us-lcssa8.us.i ]}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%j.0.off.i = add i32 \%j.017.i, -1}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  \%6 = icmp ugt i32 \%j.0.off.i, 509}{1}{1}
+\ganttcon{2}{3}{1}{4}
+\ganttbar{  \%7 = zext i1 \%6 to i32}{1}{1}
+\ganttcon{2}{4}{1}{5}
+\ganttbar{  \%8 = or i32 \%7, \%3}{1}{1}
+\ganttcon{2}{5}{1}{6}
+\ganttbar{  \%9 = icmp eq i32 \%8, 0}{1}{1}
+\ganttcon{2}{6}{1}{7}
+\ganttbar{  br i1 \%9, label \%.preheader.preheader.i, label \%..us-lcssa8.us.i\_crit\_edg...}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{2}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  br label \%.us-lcssa8.us.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{46}{8}
+\begin{ganttitle}
+\numtitle{0}{1}{7}{1}
+\end{ganttitle}
+\ganttbar{  \%scevgep22.sum = add i32 \%j.017.i, -1}{1}{1}
+\ganttcon{2}{1}{2}{11}
+\ganttbar{  \%scevgep21 = getelementptr [512 x [512 x i8]]* @elaine\_512\_input, i32 0, i3...}{1}{1}
+\ganttcon{2}{2}{2}{12}
+\ganttbar{  \%scevgep18.sum = add i32 \%j.017.i, -511}{1}{1}
+\ganttcon{2}{3}{2}{13}
+\ganttbar{  \%scevgep10.sum = add i32 \%j.017.i, -1}{1}{1}
+\ganttcon{2}{4}{2}{14}
+\ganttbar{  \%scevgep8.sum = add i32 \%j.017.i, 1}{1}{1}
+\ganttcon{2}{5}{2}{16}
+\ganttbar{  \%scevgep16.sum = add i32 \%j.017.i, 511}{1}{1}
+\ganttcon{2}{6}{2}{17}
+\ganttbar{  \%scevgep15 = getelementptr [512 x [512 x i8]]* @elaine\_512\_input, i32 0, i3...}{1}{1}
+\ganttcon{2}{7}{1}{8}
+\ganttbar{  \%32 = load i8* \%scevgep15, align 1, !tbaa !1}{1}{2}
+\ganttcon{3}{8}{3}{21}
+\ganttbar{  \%scevgep12.sum = add i32 \%j.017.i, 1}{1}{1}
+\ganttcon{2}{9}{2}{18}
+\ganttbar{  br label \%.us-lcssa8.us.i}{1}{1}
+\ganttbar{  \%scevgep23 = getelementptr [512 x [512 x i8]]* @elaine\_512\_input, i32 0, i3...}{2}{1}
+\ganttcon{3}{11}{3}{19}
+\ganttbar{  \%12 = load i8* \%scevgep21, align 1, !tbaa !1}{2}{2}
+\ganttcon{4}{12}{4}{23}
+\ganttbar{  \%scevgep19 = getelementptr [512 x [512 x i8]]* @elaine\_512\_input, i32 0, i3...}{2}{1}
+\ganttcon{3}{13}{4}{25}
+\ganttbar{  \%scevgep11 = getelementptr [512 x [512 x i8]]* @elaine\_512\_input, i32 0, i3...}{2}{1}
+\ganttcon{3}{14}{2}{15}
+\ganttbar{  \%20 = load i8* \%scevgep11, align 1, !tbaa !1}{2}{2}
+\ganttcon{4}{15}{4}{26}
+\ganttbar{  \%scevgep9 = getelementptr [512 x [512 x i8]]* @elaine\_512\_input, i32 0, i32...}{2}{1}
+\ganttcon{3}{16}{3}{20}
+\ganttbar{  \%scevgep17 = getelementptr [512 x [512 x i8]]* @elaine\_512\_input, i32 0, i3...}{2}{1}
+\ganttcon{3}{17}{5}{33}
+\ganttbar{  \%scevgep13 = getelementptr [512 x [512 x i8]]* @elaine\_512\_input, i32 0, i3...}{2}{1}
+\ganttcon{3}{18}{4}{28}
+\ganttbar{  \%10 = load i8* \%scevgep23, align 1, !tbaa !1}{3}{2}
+\ganttcon{5}{19}{5}{29}
+\ganttbar{  \%24 = load i8* \%scevgep9, align 1, !tbaa !1}{3}{2}
+\ganttcon{5}{20}{5}{31}
+\ganttbar{  \%33 = zext i8 \%32 to i32}{3}{1}
+\ganttcon{4}{21}{3}{22}
+\ganttbar{  \%34 = mul nsw i32 \%33, -2}{3}{1}
+\ganttcon{4}{22}{7}{43}
+\ganttbar{  \%13 = zext i8 \%12 to i32}{4}{1}
+\ganttcon{5}{23}{4}{24}
+\ganttbar{  \%14 = shl nuw nsw i32 \%13, 1}{4}{1}
+\ganttcon{5}{24}{5}{30}
+\ganttbar{  \%16 = load i8* \%scevgep19, align 1, !tbaa !1}{4}{2}
+\ganttcon{6}{25}{6}{34}
+\ganttbar{  \%21 = zext i8 \%20 to i32}{4}{1}
+\ganttcon{5}{26}{4}{27}
+\ganttbar{  \%22 = mul nsw i32 \%21, -2}{4}{1}
+\ganttcon{5}{27}{6}{37}
+\ganttbar{  \%36 = load i8* \%scevgep13, align 1, !tbaa !1}{4}{2}
+\ganttcon{6}{28}{6}{39}
+\ganttbar{  \%11 = zext i8 \%10 to i32}{5}{1}
+\ganttcon{6}{29}{6}{35}
+\ganttcon{6}{29}{5}{30}
+\ganttbar{  \%15 = add nuw nsw i32 \%14, \%11}{5}{1}
+\ganttcon{6}{30}{6}{36}
+\ganttbar{  \%25 = zext i8 \%24 to i32}{5}{1}
+\ganttcon{6}{31}{5}{32}
+\ganttbar{  \%26 = shl nuw nsw i32 \%25, 1}{5}{1}
+\ganttcon{6}{32}{6}{38}
+\ganttbar{  \%28 = load i8* \%scevgep17, align 1, !tbaa !1}{5}{2}
+\ganttcon{7}{33}{7}{40}
+\ganttbar{  \%17 = zext i8 \%16 to i32}{6}{1}
+\ganttcon{7}{34}{6}{36}
+\ganttcon{7}{34}{6}{35}
+\ganttbar{  \%18 = sub i32 \%17, \%11}{6}{1}
+\ganttcon{7}{35}{6}{37}
+\ganttbar{  \%19 = add nuw nsw i32 \%17, \%15}{6}{1}
+\ganttcon{7}{36}{7}{42}
+\ganttbar{  \%23 = add nsw i32 \%22, \%18}{6}{1}
+\ganttcon{7}{37}{6}{38}
+\ganttbar{  \%27 = add nsw i32 \%26, \%23}{6}{1}
+\ganttcon{7}{38}{7}{41}
+\ganttbar{  \%37 = zext i8 \%36 to i32}{6}{1}
+\ganttcon{7}{39}{7}{45}
+\ganttcon{7}{39}{7}{44}
+\ganttbar{  \%29 = zext i8 \%28 to i32}{7}{1}
+\ganttcon{8}{40}{7}{42}
+\ganttcon{8}{40}{7}{41}
+\ganttbar{  \%30 = sub i32 \%27, \%29}{7}{1}
+\ganttcon{8}{41}{7}{44}
+\ganttbar{  \%31 = sub i32 \%19, \%29}{7}{1}
+\ganttcon{8}{42}{7}{43}
+\ganttbar{  \%35 = add nsw i32 \%34, \%31}{7}{1}
+\ganttcon{8}{43}{7}{45}
+\ganttbar{  \%38 = add nsw i32 \%37, \%30}{7}{1}
+\ganttbar{  \%39 = sub i32 \%35, \%37}{7}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{18}{3}
+\begin{ganttitle}
+\numtitle{0}{1}{2}{1}
+\end{ganttitle}
+\ganttbar{  \%gy\_sum.0.lcssa.i = phi i32 [ 0, \%..us-lcssa8.us.i\_crit\_edge ], [ \%39, \...}{1}{1}
+\ganttcon{2}{1}{1}{9}
+\ganttcon{2}{1}{1}{8}
+\ganttcon{2}{1}{1}{7}
+\ganttbar{  \%gx\_sum.0.lcssa.i = phi i32 [ 0, \%..us-lcssa8.us.i\_crit\_edge ], [ \%38, \...}{1}{1}
+\ganttcon{2}{2}{1}{6}
+\ganttcon{2}{2}{1}{5}
+\ganttcon{2}{2}{1}{4}
+\ganttbar{  \%.pre-phi = add nsw i32 \%j.017.i, 1}{1}{1}
+\ganttcon{2}{3}{1}{16}
+\ganttbar{  \%40 = icmp slt i32 \%gx\_sum.0.lcssa.i, 0}{1}{1}
+\ganttcon{2}{4}{1}{6}
+\ganttbar{  \%41 = sub nsw i32 0, \%gx\_sum.0.lcssa.i}{1}{1}
+\ganttcon{2}{5}{1}{6}
+\ganttbar{  \%42 = select i1 \%40, i32 \%41, i32 \%gx\_sum.0.lcssa.i}{1}{1}
+\ganttcon{2}{6}{1}{10}
+\ganttbar{  \%43 = icmp slt i32 \%gy\_sum.0.lcssa.i, 0}{1}{1}
+\ganttcon{2}{7}{1}{9}
+\ganttbar{  \%44 = sub nsw i32 0, \%gy\_sum.0.lcssa.i}{1}{1}
+\ganttcon{2}{8}{1}{9}
+\ganttbar{  \%45 = select i1 \%43, i32 \%44, i32 \%gy\_sum.0.lcssa.i}{1}{1}
+\ganttcon{2}{9}{1}{10}
+\ganttbar{  \%46 = add nsw i32 \%45, \%42}{1}{1}
+\ganttcon{2}{10}{1}{12}
+\ganttcon{2}{10}{1}{11}
+\ganttbar{  \%47 = icmp sgt i32 \%46, 255}{1}{1}
+\ganttcon{2}{11}{1}{13}
+\ganttbar{  \%48 = trunc i32 \%46 to i8}{1}{1}
+\ganttcon{2}{12}{1}{13}
+\ganttbar{  \%49 = select i1 \%47, i8 -1, i8 \%48}{1}{1}
+\ganttcon{2}{13}{1}{15}
+\ganttbar{  \%scevgep7 = getelementptr [512 x [512 x i8]]* \%sobel\_output, i32 0, i32 \%i...}{1}{1}
+\ganttcon{2}{14}{1}{15}
+\ganttbar{  store i8 \%49, i8* \%scevgep7, align 1, !tbaa !1}{1}{1}
+\ganttbar{  \%exitcond25.i = icmp eq i32 \%.pre-phi, 512}{1}{1}
+\ganttcon{2}{16}{1}{17}
+\ganttbar{  br i1 \%exitcond25.i, label \%50, label \%5}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%exitcond5 = icmp eq i32 \%4, 512}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%exitcond5, label \%.preheader.preheader, label \%.preheader1.i}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{2}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  br label \%.preheader}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%i.04 = phi i32 [ \%57, \%56 ], [ 0, \%.preheader.preheader ]}{1}{1}
+\ganttbar{  \%result.03 = phi i32 [ \%result.1., \%56 ], [ 0, \%.preheader.preheader ]}{1}{1}
+\ganttbar{  br label \%51}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{13}{4}
+\begin{ganttitle}
+\numtitle{0}{1}{3}{1}
+\end{ganttitle}
+\ganttbar{  \%j.02 = phi i32 [ 0, \%.preheader ], [ \%55, \%51 ]}{1}{1}
+\ganttcon{2}{1}{1}{7}
+\ganttcon{2}{1}{1}{4}
+\ganttcon{2}{1}{1}{3}
+\ganttbar{  \%result.11 = phi i32 [ \%result.03, \%.preheader ], [ \%result.1., \%51 ]}{1}{1}
+\ganttcon{2}{2}{3}{12}
+\ganttbar{  \%scevgep2 = getelementptr [512 x [512 x i8]]* \%sobel\_output, i32 0, i32 \%i...}{1}{1}
+\ganttcon{2}{3}{1}{5}
+\ganttbar{  \%scevgep = getelementptr [512 x [512 x i8]]* @elaine\_512\_golden\_output, i3...}{1}{1}
+\ganttcon{2}{4}{1}{6}
+\ganttbar{  \%52 = load i8* \%scevgep2, align 1, !tbaa !1}{1}{2}
+\ganttcon{3}{5}{3}{10}
+\ganttbar{  \%53 = load i8* \%scevgep, align 1, !tbaa !1}{1}{2}
+\ganttcon{3}{6}{3}{10}
+\ganttbar{  \%55 = add nsw i32 \%j.02, 1}{1}{1}
+\ganttcon{2}{7}{1}{8}
+\ganttcon{2}{7}{1}{1}
+\ganttbar{  \%exitcond1 = icmp eq i32 \%55, 512}{1}{1}
+\ganttcon{2}{8}{1}{9}
+\ganttbar{  br i1 \%exitcond1, label \%56, label \%51}{1}{1}
+\ganttbar{  \%not. = icmp ne i8 \%52, \%53}{3}{1}
+\ganttcon{4}{10}{3}{11}
+\ganttbar{  \%54 = zext i1 \%not. to i32}{3}{1}
+\ganttcon{4}{11}{3}{12}
+\ganttbar{  \%result.1. = add nsw i32 \%54, \%result.11}{3}{1}
+\ganttcon{4}{12}{1}{2}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%57 = add nsw i32 \%i.04, 1}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%exitcond = icmp eq i32 \%57, 512}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  br i1 \%exitcond, label \%58, label \%.preheader}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%59 = icmp eq i32 \%result.1., 0}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%59, label \%60, label \%62}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%61 = tail call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([7 x i8]*...}{1}{1}
+\ganttbar{  br label \%64}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%63 = tail call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([26 x i8]...}{1}{1}
+\ganttbar{  br label \%64}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{2}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  ret i32 \%result.1.}{1}{1}
+\end{gantt}
+\end{figure}
+\end{document}
