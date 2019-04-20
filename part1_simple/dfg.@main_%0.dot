@@ -1,5 +1,0 @@
-digraph {
-Node0x3fd9e90[label="  %sobel_output = alloca [512 x [512 x i..."];
-Node0x3fd9e90 -> Node0x3fd9e90[label="D:0.00ns L:0",color=blue];
-Node0x3fd9e90 -> Node0x3fd9e90[label="D:0.00ns L:0",color=blue];
-}
