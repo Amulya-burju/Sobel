@@ -1,0 +1,151 @@
+\documentclass[landscape]{article}
+\usepackage{gantt}
+\pagestyle{empty}
+\begin{document}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{15}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%window.2.2.0 = phi i8 [ 0, \%0 ], [ \%6, \%.preheader.i ], !legup.pipeline.s...}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%window.2.1.0 = phi i8 [ 0, \%0 ], [ \%window.2.2.0, \%.preheader.i ], !legup...}{1}{1}
+\ganttbar{  \%window.1.2.0 = phi i8 [ 0, \%0 ], [ \%8, \%.preheader.i ], !legup.pipeline.s...}{1}{1}
+\ganttcon{2}{3}{1}{4}
+\ganttbar{  \%window.1.1.0 = phi i8 [ 0, \%0 ], [ \%window.1.2.0, \%.preheader.i ], !legup...}{1}{1}
+\ganttbar{  \%window.0.2.0 = phi i8 [ 0, \%0 ], [ \%10, \%.preheader.i ], !legup.pipeline....}{1}{1}
+\ganttcon{2}{5}{1}{6}
+\ganttbar{  \%window.0.1.0 = phi i8 [ 0, \%0 ], [ \%window.0.2.0, \%.preheader.i ], !legup...}{1}{1}
+\ganttbar{  \%prev\_prev\_row\_index.0 = phi i32 [ 0, \%0 ], [ \%16, \%.preheader.i ], !le...}{1}{1}
+\ganttbar{  \%prev\_row\_index.0 = phi i32 [ 0, \%0 ], [ \%14, \%.preheader.i ], !legup.pi...}{1}{1}
+\ganttbar{  \%x.013.i = phi i32 [ -1, \%0 ], [ \%..i, \%.preheader.i ], !legup.pipeline.st...}{1}{1}
+\ganttbar{  \%y.012.i = phi i32 [ 0, \%0 ], [ \%3, \%.preheader.i ], !legup.pipeline.start...}{1}{1}
+\ganttbar{  \%start.011.i = phi i32 [ 0, \%0 ], [ \%47, \%.preheader.i ], !legup.pipeline....}{1}{1}
+\ganttbar{  \%y\_offset.010.i = phi i32 [ -1, \%0 ], [ \%64, \%.preheader.i ], !legup.pipe...}{1}{1}
+\ganttbar{  \%x\_offset.09.i = phi i32 [ -1, \%0 ], [ \%65, \%.preheader.i ], !legup.pipel...}{1}{1}
+\ganttbar{  \%i.08.i = phi i32 [ 0, \%0 ], [ \%66, \%.preheader.i ], !legup.canonical\_ind...}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%67 = tail call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([15 x i8]...}{1}{1}
+\ganttbar{  br label \%.preheader}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%result.04 = phi i32 [ 0, \%sobel\_fast\_pipelined.exit ], [ \%75, \%82 ]}{1}{1}
+\ganttbar{  \%68 = phi i32 [ 0, \%sobel\_fast\_pipelined.exit ], [ \%83, \%82 ]}{1}{1}
+\ganttbar{  br label \%69}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{11}{3}
+\begin{ganttitle}
+\numtitle{0}{1}{2}{1}
+\end{ganttitle}
+\ganttbar{  \%result.12 = phi i32 [ \%result.04, \%.preheader ], [ \%75, \%80 ]}{1}{1}
+\ganttcon{2}{1}{2}{9}
+\ganttbar{  \%70 = phi i32 [ 0, \%.preheader ], [ \%81, \%80 ]}{1}{1}
+\ganttcon{2}{2}{1}{4}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  \%scevgep2 = getelementptr [512 x [512 x i8]]* @output\_image, i32 0, i32 \%68...}{1}{1}
+\ganttcon{2}{3}{1}{5}
+\ganttbar{  \%scevgep = getelementptr [512 x [512 x i8]]* @elaine\_512\_golden\_output, i3...}{1}{1}
+\ganttcon{2}{4}{1}{6}
+\ganttbar{  \%71 = load i8* \%scevgep2, align 1, !tbaa !4}{1}{1}
+\ganttcon{2}{5}{2}{7}
+\ganttbar{  \%72 = load i8* \%scevgep, align 1, !tbaa !4}{1}{1}
+\ganttcon{2}{6}{2}{7}
+\ganttbar{  \%73 = icmp eq i8 \%71, \%72}{2}{1}
+\ganttcon{3}{7}{2}{10}
+\ganttcon{3}{7}{2}{8}
+\ganttbar{  \%74 = zext i1 \%73 to i32}{2}{1}
+\ganttcon{3}{8}{2}{9}
+\ganttbar{  \%75 = add nsw i32 \%74, \%result.12}{2}{1}
+\ganttcon{3}{9}{1}{1}
+\ganttbar{  br i1 \%73, label \%80, label \%76}{2}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{5}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%77 = zext i8 \%71 to i32}{1}{1}
+\ganttcon{2}{1}{1}{3}
+\ganttbar{  \%78 = zext i8 \%72 to i32}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  \%79 = tail call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([53 x i8]...}{1}{1}
+\ganttbar{  br label \%80}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%81 = add nsw i32 \%70, 1}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%exitcond1 = icmp eq i32 \%81, 512}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  br i1 \%exitcond1, label \%82, label \%69}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%83 = add nsw i32 \%68, 1}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%exitcond = icmp eq i32 \%83, 512}{1}{1}
+\ganttcon{2}{2}{1}{3}
+\ganttbar{  br i1 \%exitcond, label \%84, label \%.preheader}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%85 = icmp eq i32 \%75, 262144}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  br i1 \%85, label \%86, label \%88}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{3}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%87 = tail call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([7 x i8]*...}{1}{1}
+\ganttbar{  br label \%91}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{4}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  \%89 = sub nsw i32 262144, \%75}{1}{1}
+\ganttcon{2}{1}{1}{2}
+\ganttbar{  \%90 = tail call i32 (i8*, ...)* @printf(i8* getelementptr inbounds ([26 x i8]...}{1}{1}
+\ganttbar{  br label \%91}{1}{1}
+\end{gantt}
+\end{figure}
+\begin{figure}
+\begin{gantt}[fontsize=\scriptsize]{2}{2}
+\begin{ganttitle}
+\numtitle{0}{1}{1}{1}
+\end{ganttitle}
+\ganttbar{  ret i32 \%75}{1}{1}
+\end{gantt}
+\end{figure}
+\end{document}

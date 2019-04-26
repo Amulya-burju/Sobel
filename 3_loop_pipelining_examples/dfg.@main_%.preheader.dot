@@ -1,0 +1,9 @@
+digraph {
+Node0x2e6af90[label="  %result.04 = phi i32 [ 0, %sobel_fast_..."];
+Node0x2e6af90 -> Node0x2e6af90[label="D:0.00ns L:0",color=blue];
+Node0x2e6b070[label="  %68 = phi i32 [ 0, %sobel_fast_pipelin..."];
+Node0x2e6b070 -> Node0x2e6b070[label="D:0.00ns L:0",color=blue];
+Node0x2e6b070 -> Node0x2e6b070[label="D:0.00ns L:0",color=blue];
+Node0x2e6b070 -> Node0x2e6b070[label="D:0.00ns L:0",color=blue];
+Node0x2e6b070 -> Node0x2e6b070[label="D:0.00ns L:0",color=blue];
+}

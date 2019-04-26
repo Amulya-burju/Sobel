@@ -1,0 +1,30 @@
+digraph {
+Node0x2e6b230[label="  %result.12 = phi i32 [ %result.04, %.p..."];
+Node0x2e6b230 -> Node0x2e6b230[label="D:0.00ns L:0",color=blue];
+Node0x2e6b310[label="  %70 = phi i32 [ 0, %.preheader ], [ %8..."];
+Node0x2e6b310 -> Node0x2e6b310[label="D:0.00ns L:0",color=blue];
+Node0x2e6b310 -> Node0x2e6b310[label="D:0.00ns L:0",color=blue];
+Node0x2e6b310 -> Node0x2e6b310[label="D:0.00ns L:0",color=blue];
+Node0x2e6b310 -> Node0x2e6b310[label="D:0.00ns L:0",color=blue];
+Node0x2e6eb90[label="  %scevgep2 = getelementptr [512 x [512 ..."];
+Node0x2e6eb90 -> Node0x2e6eb90[label="D:6.00ns L:0",color=blue];
+Node0x2e6ec70[label="  %scevgep = getelementptr [512 x [512 x..."];
+Node0x2e6ec70 -> Node0x2e6ec70[label="D:6.00ns L:0",color=blue];
+Node0x2e6ed50[label="  %71 = load i8* %scevgep2, align 1, !tb..."];
+Node0x2e6ed50 -> Node0x2e6ed50[label="D:0.00ns L:1",color=blue];
+Node0x2e6ed50 -> Node0x2e6ed50[label="D:0.00ns L:1",color=blue];
+Node0x2e6ee30[label="  %72 = load i8* %scevgep, align 1, !tba..."];
+Node0x2e6ee30 -> Node0x2e6ee30[label="D:0.00ns L:1",color=blue];
+Node0x2e6ee30 -> Node0x2e6ee30[label="D:0.00ns L:1",color=blue];
+Node0x2e6ef10[label="  %73 = icmp eq i8 %71, %72"];
+Node0x2e6ef10 -> Node0x2e6ef10[label="D:1.25ns L:0",color=blue];
+Node0x2e6ef10 -> Node0x2e6ef10[label="D:1.25ns L:0",color=blue];
+Node0x2e6eff0[label="  %74 = zext i1 %73 to i32"];
+Node0x2e6eff0 -> Node0x2e6eff0[label="D:0.00ns L:0",color=blue];
+Node0x2e6f0d0[label="  %75 = add nsw i32 %74, %result.12"];
+Node0x2e6f0d0 -> Node0x2e6f0d0[label="D:1.59ns L:0",color=blue];
+Node0x2e6f0d0 -> Node0x2e6f0d0[label="D:1.59ns L:0",color=blue];
+Node0x2e6f0d0 -> Node0x2e6f0d0[label="D:1.59ns L:0",color=blue];
+Node0x2e6f0d0 -> Node0x2e6f0d0[label="D:1.59ns L:0",color=blue];
+Node0x2e6f0d0 -> Node0x2e6f0d0[label="D:1.59ns L:0",color=blue];
+}

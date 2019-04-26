@@ -1,0 +1,17 @@
+# vsim -c -do "run 7000000000000000ns; exit;" work.main_tb 
+# Start time: 09:39:34 on Apr 26,2019
+# Loading work.main_tb
+# Loading work.top
+# Loading work.main
+# Loading work.rom_dual_port
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.ram_dual_port
+# run 7000000000000000ns
+# Cycle:               262150 Time:              5243050    Done pipeline
+# Cycle:              1049608 Time:             20992210    PASS!
+# At t=         20992230000 clk=1 finish=1 return_val=    262144
+# Cycles:              1049609
+# ** Note: $finish    : sobel.v(3575)
+#    Time: 20992230 ns  Iteration: 2  Instance: /main_tb
+# End time: 09:43:20 on Apr 26,2019, Elapsed time: 0:03:46
+# Errors: 0, Warnings: 0

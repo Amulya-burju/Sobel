@@ -1,0 +1,34 @@
+digraph {
+Node0x2eaa680[label="pipeline_time_0"];
+Node0x2eaa400[label="LEGUP"];
+Node0x2eaa400 -> Node0x2eaa680[label="<null>"];
+Node0x2eaa400 -> Node0x2eaa400[label="~<null>"];
+Node0x2eaafe0[label="LEGUP_F_main_BB_sobel_fast_pipelinedexit"];
+Node0x2eaa680 -> Node0x2eaafe0[label="<null>"];
+Node0x2eaa680 -> Node0x2eaa680[label="~<null>"];
+Node0x2eab1c0[label="LEGUP_F_main_BB_preheader"];
+Node0x2eaafe0 -> Node0x2eab1c0;
+Node0x2eaa7c0[label="LEGUP_F_main_BB__69"];
+Node0x2eab1c0 -> Node0x2eaa7c0;
+Node0x2eaa890[label="LEGUP_F_main_BB__69"];
+Node0x2eaa7c0 -> Node0x2eaa890;
+Node0x2eac110[label="LEGUP_F_main_BB__80"];
+Node0x2eaa890 -> Node0x2eac110[label="%73"];
+Node0x2eac040[label="LEGUP_F_main_BB__76"];
+Node0x2eaa890 -> Node0x2eac040[label="~%73"];
+Node0x2eac040 -> Node0x2eac110;
+Node0x2eac1e0[label="LEGUP_F_main_BB__82"];
+Node0x2eac110 -> Node0x2eac1e0[label="%exitcond1"];
+Node0x2eac110 -> Node0x2eaa7c0[label="~%exitcond1"];
+Node0x2eac2b0[label="LEGUP_F_main_BB__84"];
+Node0x2eac1e0 -> Node0x2eac2b0[label="%exitcond"];
+Node0x2eac1e0 -> Node0x2eab1c0[label="~%exitcond"];
+Node0x2eac380[label="LEGUP_F_main_BB__86"];
+Node0x2eac2b0 -> Node0x2eac380[label="%85"];
+Node0x2eac450[label="LEGUP_F_main_BB__88"];
+Node0x2eac2b0 -> Node0x2eac450[label="~%85"];
+Node0x2eac520[label="LEGUP_F_main_BB__91"];
+Node0x2eac380 -> Node0x2eac520;
+Node0x2eac450 -> Node0x2eac520;
+Node0x2eac520 -> Node0x2eaa400;
+}
